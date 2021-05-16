@@ -1,23 +1,35 @@
 {
-  "name": "geoservice",
+  "name": "hunlocator",
   "version": "0.0.1",
-  "description": "HTTP API for geographical addresses",
+  "description": "HTTP API a Magyar Posta híres irányítószám táblázatára",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenjaminFerge/geoservice.git"
+    "url": "git+https://github.com/BenjaminFerge/hunlocator.git"
   },
   "keywords": [
     "geo",
-    "location"
+    "location",
+    "magyar",
+    "posta",
+    "hungary",
+    "irányítószám",
+    "postal code"
   ],
   "author": "Benjámin Ferge <benjamin.ferge@protonmail.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/BenjaminFerge/geoservice/issues"
+    "url": "https://github.com/BenjaminFerge/hunlocator/issues"
   },
-  "homepage": "https://github.com/BenjaminFerge/geoservice#readme"
+  "homepage": "https://github.com/BenjaminFerge/hunlocator#readme",
+  "dependencies": {
+    "cli-progress": "^3.9.0",
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
+    "jsonfile": "^6.1.0",
+    "nodejs-file-downloader": "^4.5.3"
+  }
 }
