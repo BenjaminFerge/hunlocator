@@ -23,8 +23,20 @@ if (!fs.existsSync("irsz.json")) {
 function run() {
     const { data } = require("./data");
     app.get("/", function (req, res) {
+        const { irsz, varos } = req.query;
         res.setHeader("Content-Type", "application/json");
-        res.send(JSON.stringify(data));
+        let result;
+        if (irsz) {
+            result = data.filter(r => r.irsz.startsWith(irsz))
+        } else if (varos) {
+            result = data.filter(r => r.helyseg.megnevezes
+                .toLowerCase()
+                .includes(varos)
+            );
+        } else {
+            result = data;
+        }
+        res.send(JSON.stringify(result));
     });
 
     app.listen(port, () => {
